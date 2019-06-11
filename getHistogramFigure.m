@@ -10,5 +10,5 @@ function fig = getHistogramFigure(answer, resp)
         respScore(i) = corrScore(index);
     end
     edges = [-7 -7:0.5:7 7];
-    histogram(answerScore-respScore, edges)
+    f1 = histogram(answerScore-respScore, edges);
 end

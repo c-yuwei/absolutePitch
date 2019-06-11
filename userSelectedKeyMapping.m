@@ -1,29 +1,29 @@
 function resKey = userSelectedKeyMapping(intX, intY)
     buttonRadiusX = 180;
-    buttonRadiusY = 170;
-    if intX > 58 && intX < 58+buttonRadiusX && intY < 855 && intY > 855-buttonRadiusY
+    buttonRadiusY = 160;
+    if intX > 382 && intX < 382+buttonRadiusX && intY < 601 && intY > 601-buttonRadiusY
         resKey = 'C';
-    elseif intX > 330 && intX < 330+buttonRadiusX && intY < 855 && intY > 855-buttonRadiusY
+    elseif intX > 661 && intX < 661+buttonRadiusX && intY < 857 && intY > 857-buttonRadiusY
         resKey = 'D';
-    elseif intX > 595 && intX < 595+buttonRadiusX && intY < 855 && intY > 855-buttonRadiusY
+    elseif intX > 1040 && intX < 1040+buttonRadiusX && intY < 854 && intY > 854-buttonRadiusY
         resKey = 'E';
-    elseif intX > 860 && intX < 860+buttonRadiusX && intY < 855 && intY > 855-buttonRadiusY
+    elseif intX > 1222 && intX < 1222+buttonRadiusX && intY < 774 && intY > 774-buttonRadiusY
         resKey = 'F';
-    elseif intX > 1150 && intX < 1150+buttonRadiusX && intY < 855 && intY > 855-buttonRadiusY
+    elseif intX > 1236 && intX < 1236+buttonRadiusX && intY < 427 && intY > 427-buttonRadiusY
         resKey = 'G';
-    elseif intX > 1425 && intX < 1450+buttonRadiusX && intY < 855 && intY > 855-buttonRadiusY
+    elseif intX > 866 && intX < 866+buttonRadiusX && intY < 265 && intY > 265-buttonRadiusY
         resKey = 'A';
-    elseif intX > 1690 && intX < 1690+buttonRadiusX && intY < 855 && intY > 855-buttonRadiusY
+    elseif intX > 496 && intX < 496+buttonRadiusX && intY < 433 && intY > 433-buttonRadiusY
         resKey = 'B';
-    elseif intX > 190 && intX < 190+buttonRadiusX && intY < 650 && intY > 650-buttonRadiusY
+    elseif intX > 482 && intX < 482+buttonRadiusX && intY < 770 && intY > 770-buttonRadiusY
         resKey = 'C#';
-    elseif intX > 465 && intX < 465+buttonRadiusX && intY < 650 && intY > 650-buttonRadiusY
+    elseif intX > 849 && intX < 849+buttonRadiusX && intY < 949 && intY > 949-buttonRadiusY
         resKey = 'D#';
-    elseif intX > 1005 && intX < 1005+buttonRadiusX && intY < 650 && intY > 650-buttonRadiusY
+    elseif intX > 1341 && intX < 1341+buttonRadiusX && intY < 598 && intY > 598-buttonRadiusY
         resKey = 'F#';
-    elseif intX > 1280 && intX < 1280+buttonRadiusX && intY < 650 && intY > 650-buttonRadiusY
+    elseif intX > 1057 && intX < 1057+buttonRadiusX && intY < 346 && intY > 346-buttonRadiusY
         resKey = 'G#';
-    elseif intX > 1550 && intX < 1550+buttonRadiusX && intY < 650 && intY > 650-buttonRadiusY
+    elseif intX > 682 && intX < 682+buttonRadiusX && intY < 351 && intY > 351-buttonRadiusY
         resKey = 'A#';
     else
         resKey = 'N';
