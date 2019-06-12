@@ -142,7 +142,10 @@ Screen(mainwin, 'Flip');
 
 %   load response screen
 im = imread('RespButtons.jpg'); respScreen = Screen('MakeTexture', mainwin, im);
-
+im = imread('timer1.jpg'); timerScreen(1) = Screen('MakeTexture', mainwin, im);
+im = imread('timer2.jpg'); timerScreen(2) = Screen('MakeTexture', mainwin, im);
+im = imread('timer3.jpg'); timerScreen(3) = Screen('MakeTexture', mainwin, im);
+im = imread('timer4.jpg'); timerScreen(4) = Screen('MakeTexture', mainwin, im);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Experimental instructions, wait for a spacebar response to start
 Screen('FillRect', mainwin ,bgcolor);
@@ -186,6 +189,8 @@ for a = 1:numBlocks
     for i = 1:numSolfegeSoundFiles
         Screen('FillRect', mainwin ,bgcolor);
         Screen('DrawTexture', mainwin, respScreen, [], []);
+        %Screen('DrawTexture', mainwin, timerScreen, [], []);
+        
         Screen('Flip', mainwin); % must flip for the stimulus to show up on the mainwin
         ShowCursor('hand');
         
@@ -213,7 +218,18 @@ for a = 1:numBlocks
         
         % now record response
         timeStart = GetSecs;keyIsDown=0; correct=0; rt=0;
-        [clicks,x,y,whichButton]=GetClickWithinTimeout([],5,[]);
+        x = 0; y = 0;
+        for j = 1:5
+            [clicks,x1,y1,whichButton]=GetClickWithinTimeout([],1,[]);
+            if(clicks ~= 0)
+                x = x1;
+                y = y1;
+            end
+            Screen('DrawTexture', mainwin, respScreen, [], []);
+            if(j ~= 5) Screen('DrawTexture', mainwin, timerScreen(j), [], [] ); end;
+            Screen('Flip', mainwin); % must flip for the stimulus to show up on the mainwin
+        end
+        
         if (~isempty(whichButton) && whichButton == 'esc') 
             ShowCursor;
             fclose(outfile);

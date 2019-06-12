@@ -1,0 +1,5 @@
+subid	 subage	 gender	 phonenumber	 learningmucisage	 learningmusicyears	 group	 blockNumber	 trialNumber	 answer	 userResp	 accuracy	 ReactionTime	 
+98	 19	 F	 09	 5	 13	 control	 1	 1	 A3#	 A	 5114.99	 
+98	 19	 F	 09	 5	 13	 control	 1	 2	 A4	 B	 5079.23	 
+98	 19	 F	 09	 5	 13	 control	 1	 3	 A3	 C#	 5081.32	 
+98	 19	 F	 09	 5	 13	 control	 1	 4	 A4#	 D	 5089.84	 

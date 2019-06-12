@@ -65,15 +65,9 @@ while GetSecs < tend
 
     % Wait for a press or timeout:
     keyIsDown=0;
-    while ~any(buttons) && GetSecs < tend || keyCode(KbName('ESCAPE'))
+    while ~any(buttons) && GetSecs < tend 
         [x,y,buttons] = GetMouse([], mouseDev);
-        [keyIsDown, secs, keyCode] = KbCheck;
         whichButton = find(buttons);
-        if keyIsDown
-            if keyCode(KbName('ESCAPE'))
-                whichButton = 'esc'    
-            end
-        end
         if (nice>0), WaitSecs('YieldSecs', rtwait); end;    
     end;
 
